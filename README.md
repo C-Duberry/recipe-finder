@@ -6,12 +6,6 @@
 
 This project brings together the data engineering skills developed during training in a practical, end-to-end application. It goes beyond a basic ETL pipeline by incorporating semantic search and Retrieval-Augmented Generation (RAG).
 
-<br>
-
-## Dataset 
-I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
-
-![Recipe Finder homepage](images/dataset.PNG)
 
 ## Goals
 
@@ -27,6 +21,13 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 ![Recipe Finder demo](images/diagram.png)
 
 <br>
+
+## Dataset 
+I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
+
+![Recipe Finder homepage](images/dataset.PNG)
+
+
 
 ## Tech Stack
 
