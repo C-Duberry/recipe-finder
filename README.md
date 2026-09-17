@@ -4,7 +4,29 @@
 
 ## Project Purpose and Goals
 
-I created this project to bring together the data engineering skills I developed during my training and apply them to a practical, end-to-end project. I wanted to build something more than a basic ETL pipeline and explore areas of data engineering that I had not worked with as much, particularly semantic search and Retrieval-Augmented Generation (RAG).
+This project brings together the data engineering skills developed during training in a practical, end-to-end application. It goes beyond a basic ETL pipeline by incorporating semantic search and Retrieval-Augmented Generation (RAG).
+
+```mermaid
+graph LR
+
+    A[TheMealDB API] --> B[Extract]
+    B --> C[Load Raw Data]
+    C --> D[Transform]
+    D --> E[MongoDB Atlas]
+
+    E --> F[Generate Embeddings]
+    F --> G[(FAISS Index)]
+
+    H[User Query] --> I[Query Embedding]
+    I --> G
+    G --> J[Top 4 Similar Recipes]
+    J --> K[RAG Prompt]
+    E --> J
+    K --> L[LLM]
+    L --> M[Recipe Recommendations]
+```
+
+<br>
 
 ## Dataset 
 I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
