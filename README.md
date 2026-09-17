@@ -32,7 +32,7 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 
 | Technology                  | Purpose                                                              |
 | --------------------------- | -------------------------------------------------------------------- |
-| **Python**                  | ETL pipeline, data transformation, embeddings and application logic  |
+| **Python**                  | ETL pipeline, data transformation, embedding generation, semantic search and application logic  |
 | **TheMealDB API**           | External source for recipe data                                      |
 | **MongoDB / MongoDB Atlas** | Database for storing recipe data, with Atlas providing cloud hosting |
 | **Sentence Transformers**   | Generate embeddings for recipes and user queries                     |
