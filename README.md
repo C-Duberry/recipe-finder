@@ -1,9 +1,26 @@
-# Recipe Finder
+
+![Recipe Finder homepage](images/banner.png)
 
 
-## Project Purpose and Goals
+## Project Purpose 
 
 This project brings together the data engineering skills developed during training in a practical, end-to-end application. It goes beyond a basic ETL pipeline by incorporating semantic search and Retrieval-Augmented Generation (RAG).
+
+<br>
+
+## Dataset 
+I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
+
+![Recipe Finder homepage](images/dataset.PNG)
+
+## Goals
+
+🍴 Build an end-to-end ETL pipeline using data from an external API. <br>
+🍴 Implement semantic search and RAG to add value to the application. <br>
+🍴 Store the data in a cloud database. <br>
+🍴 Deploy the application as a working website. <br>
+
+<br>
 
 ### Architecture
 
@@ -26,21 +43,6 @@ graph LR
     K --> L[LLM]
     L --> M[Recipe Recommendations]
 ```
-
-<br>
-
-## Dataset 
-I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
-
-![Recipe Finder homepage](images/dataset.PNG)
-
-## Goals
-
-🍴 Build an end-to-end ETL pipeline using data from an external API. <br>
-🍴 Implement semantic search and RAG to add value to the application. <br>
-🍴 Store the data in a cloud database. <br>
-🍴 Deploy the application as a working website. <br>
-
 <br>
 
   ## Tech Stack
