@@ -1,10 +1,11 @@
 # Recipe Finder
 
 
-
 ## Project Purpose and Goals
 
 This project brings together the data engineering skills developed during training in a practical, end-to-end application. It goes beyond a basic ETL pipeline by incorporating semantic search and Retrieval-Augmented Generation (RAG).
+
+### Architecture
 
 ```mermaid
 graph LR
@@ -31,13 +32,14 @@ graph LR
 ## Dataset 
 I chose recipes as the subject because it gave me a dataset that was easy to understand while still providing opportunities to work with messy data, text processing, embeddings and search.
 
+![Recipe Finder homepage](images/dataset.PNG)
 
 ## Goals
 
-- Build an end-to-end ETL pipeline using data from an external API.
-- Implement semantic search and RAG to add value to the application.
-- Store the data in a cloud database.
-- Deploy the application as a working website.
+🍴 Build an end-to-end ETL pipeline using data from an external API. <br>
+🍴 Implement semantic search and RAG to add value to the application. <br>
+🍴 Store the data in a cloud database. <br>
+🍴 Deploy the application as a working website. <br>
 
 <br>
 
@@ -49,10 +51,10 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 | **TheMealDB API**           | External source for recipe data                                      |
 | **MongoDB / MongoDB Atlas** | Database for storing recipe data, with Atlas providing cloud hosting |
 | **Sentence Transformers**   | Generate embeddings for recipes and user queries                     |
-| **FAISS**                   | Perform semantic similarity searches                                 |
+| **FAISS**                   | Index and search recipe embeddings for semantic similarity           |                     
 | **LLM / RAG**               | Generate responses based on the recipes retrieved by semantic search |
 | **Flask**                   | Connect the backend functionality to the website                     |
-| **HTML, CSS & JavaScript**  | Build the frontend                                                   |
+| **HTML & CSS**  | Build the frontend                                                   |
 
 
 <br>
@@ -77,24 +79,33 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 > 
 > **The Solution:** Investigating the configuration revealed that modifying the prefix of the API connection string resolved the issue and established a stable connection.
 
+<br>
+
 ## Finished Product
 
 The finished application allows users to search for recipes using natural language. Semantic search retrieves recipes based on the meaning of the user's query, and RAG uses the retrieved recipes to generate a relevant response.
 
 The application displays the recommended recipes along with their ingredients and cooking instructions, with the recipe data stored in MongoDB Atlas and the application deployed using Flask.
+<br>
 
+### Demo
+
+![Recipe Finder demo](images/demo.gif)
+
+<br>
 
 ## Why This Is Useful for Companies
 
-- Demonstrates an understanding of the end-to-end data lifecycle, from extracting data through to using it in an application.
-- Shows how raw data can be transformed into a usable and structured format.
-- Demonstrates experience working with cloud-hosted databases and deployed applications.
-- Shows how semantic search and AI can be applied to data to create useful functionality for end users.
-- Demonstrates the ability to troubleshoot problems and work around technical limitations.
-- Shows that these skills can be applied to different datasets and business requirements, rather than being limited to recipe data.
+🍴 Demonstrates an understanding of the end-to-end data lifecycle, from extracting data through to using it in an application. <br>
+🍴 Shows how raw data can be transformed into a usable and structured format. <br>
+🍴 Demonstrates experience working with cloud-hosted databases and deployed applications <br>
+🍴 Shows how semantic search and AI can be applied to data to create useful functionality for end users. <br>
+🍴 Demonstrates the ability to troubleshoot problems and work around technical limitations. <br>
+🍴 Shows that these skills can be applied to different datasets and business requirements, rather than being limited to recipe data. 
 
+<br>
 
-## 📋 Future Improvements
+##  Future Improvements
 
 | Improvement | Description |
 | :--- | :--- |
