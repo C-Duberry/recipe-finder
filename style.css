@@ -1,0 +1,289 @@
+
+
+body {
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: #302f2f;
+    row-gap: 1.5em;
+    position: relative;
+    align-items: center;
+    background: #f6f5e963;
+    min-height: 100vh;
+    padding:0;
+}
+
+
+
+.title-form.has-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #3a584a;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    height: 150px;
+    color: white;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    row-gap: 0;
+    padding-bottom: 5px;
+}
+
+
+.title-form{
+    background: #3a584a;
+    position: absolute;
+    bottom: 40%;
+    width: 32%;
+    height: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fcfbf6;
+    row-gap: 1em;
+    font-size: 15pt;
+    box-shadow: 3px 5px 7px 0px rgb(12 4 4 / 14%);
+    border-radius: 5px;
+
+}
+
+
+.title-form.has-results  input{
+    height: 25px;
+    box-shadow: 0px 1px 1px 2px rgb(12 4 4 / 15%);
+    border: 0;
+    border-radius: 3px;
+}
+
+.title-form input{
+    height: 40px;
+    box-shadow: 0px 1px 1px 2px rgb(12 4 4 / 15%);
+    border: 0;
+    border-radius: 3px;
+    width: 194px;
+
+
+}
+
+.title-form  button{
+
+    height: 100%;
+    background: white;
+    border: 0;
+    border-radius: 3px;
+    width: 70px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+#recipe-rec{
+       width: 70%;
+}
+
+#recipes{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    width: clamp(1000px, 75vw, 1200px);
+
+
+
+}
+
+
+article{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: white;
+    position: relative;
+
+}
+
+article > p {
+    padding-left: 10px;
+}
+
+
+ h1{
+         margin: 0px 0 10px 0;
+     font-family: 'Annie Use Your Telescope';
+    font-size: 4rem
+
+
+ }
+h2 {
+    margin: 0;
+    /*font-family: 'Annie Use Your Telescope';*/
+    font-family: "Noto Serif Balinese", serif;;
+    font-size: 1.5rem;
+    /*text-decoration: underline;*/
+}
+
+#answer{
+    margin: 0;
+    font-family: 'Noto Serif Balinese';
+    font-size: 0.9rem;
+    padding: 0.2em 0 1em 0;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    /*font-style: italic;*/
+}
+
+
+
+
+#rec-name{
+     font-family: "Annie Use Your Telescope", cursive;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding-left: 27px;
+    color:#23352d;
+}
+
+
+#origin-con{
+      position: absolute;
+
+    top: 60%;
+    z-index: 2;
+    /* padding: 5px; */
+    border-radius: 2px;
+    /* left: 4px; */
+    margin: 0 0px 5px 5px;
+    height: 45px;
+    padding: 0 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#origin{
+margin: 0;
+}
+
+#origin-con:before{
+    content: "";
+    position: absolute;
+    background: #00000057;
+    top: 8%;
+    z-index: 2;
+    border-radius: 2px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    z-index: -1;
+}
+
+
+img{
+    width: 100%;
+
+}
+
+#recipe-text{
+    background-color: #fdfbf6;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+    color: #423f3f;
+    font-size: 0.9rem;
+    line-height: 19px;
+}
+
+/*#recipe-text:after{*/
+/*content: "";*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    background-color: #3a584a;*/
+/*    position: absolute;*/
+/*    right: 62%;*/
+/*    align-self: center;*/
+/*    height: 80%;*/
+
+/*}*/
+
+
+#ingredients{
+    padding: 0 10px;
+    border-right: 1px dotted #23352d;
+}
+
+#directions{
+    padding: 0 10px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+ul > li {
+    padding-bottom: 5px;
+}
+
+ol {
+    padding-left: 15px;
+}
+
+ol > li {
+        padding-bottom: 10px;
+}
+
+
+#source{
+    padding-left: 10px;
+}
+
+#source a{
+    color: #423f3f;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    #recipes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #recipe-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*#recipe-text:after{*/
+    /*display: none;*/
+    /*}*/
+    #ingredients{
+        border-bottom: 1px solid #23352d;
+    }
+
+    #recipes{
+        width: 100%;
+    }
+
+  #recipe-rec{
+      width: 95%;
+  }
+  #answer{
+   font-size: 0.8rem;
+  }
+
+  h2{
+      font-size: 1.5rem;
+  }
+}
