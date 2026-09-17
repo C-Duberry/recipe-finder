@@ -24,28 +24,11 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 
 ### Architecture
 
-```mermaid
-graph LR
+![Recipe Finder demo](images/diagram.png)
 
-    A[TheMealDB API] --> B[Extract]
-    B --> C[Load Raw Data]
-    C --> D[Transform]
-    D --> E[MongoDB Atlas]
-
-    E --> F[Generate Embeddings]
-    F --> G[(FAISS Index)]
-
-    H[User Query] --> I[Query Embedding]
-    I --> G
-    G --> J[Top 4 Similar Recipes]
-    J --> K[RAG Prompt]
-    E --> J
-    K --> L[LLM]
-    L --> M[Recipe Recommendations]
-```
 <br>
 
-  ## Tech Stack
+## Tech Stack
 
 | Technology                  | Purpose                                                              |
 | --------------------------- | -------------------------------------------------------------------- |
