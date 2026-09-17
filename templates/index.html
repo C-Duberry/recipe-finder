@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Recipe Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Limelight&family=Noto+Serif+Balinese&family=Story+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main>
+<div class="title-form {% if recipes %}has-results{% endif %}"><h1>Recipe Finder</h1>
+
+<form method="POST" action="/search">
+    <input type="text" name="query">
+    <button type="submit">Search</button>
+</form>
+</div>
+{% if answer %}
+    <div id="recipe-rec">
+
+    <h2>Recipe recommendations</h2>
+
+    <p id="answer">{{ answer }}</p>
+      </div>
+{% endif %}
+
+{% if recipes %}
+    <div id="recipes">
+
+
+    {% for recipe in recipes %}
+        <article>
+
+            <h3 id="rec-name">{{ recipe.meal }}</h3>
+
+
+            <img src="{{ recipe.mealthumb }}" alt="{{ recipe.meal }}">
+            <div id="origin-con">
+            <p id="origin">{{ recipe.category }} | Origin: {{ recipe.country }}</p>
+            </div>
+            <div id="recipe-text">
+             <div id="ingredients">
+            <h4>Ingredients</h4>
+
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="directions">
+            <h4>Directions</h4>
+
+            <ol>
+                {% for step in recipe.steps %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+</div>
+                </div>
+        <p id="source"><a href="{{ recipe.source }}" target="_blank">View original recipe</a></p>
+        </article>
+
+    {% endfor %}
+ </div>
+{% endif %}
+</main>
+
+</body>
+</html>
