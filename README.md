@@ -58,15 +58,6 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
 > **The Problem:** The LLMs initially tested suffered from request limits or frequently became overloaded, impacting performance.
 > 
 > **The Solution:** Transitioning to a free, more basic model combined with refined prompting allowed for much more consistent and reliable responses.
-
-###  Deploying the Application
-
-> **The Problem:** The application initially experienced connectivity issues with MongoDB Atlas upon deployment, caused by hosting and connection configuration errors.
-> 
-> **The Solution:** Investigating the configuration revealed that modifying the prefix of the API connection string resolved the issue and established a stable connection.
-
-<br>
-
 ### Prompt example
 
 ```python
@@ -90,6 +81,16 @@ I chose recipes as the subject because it gave me a dataset that was easy to und
     {query}
     """
 ```
+
+###  Deploying the Application
+
+> **The Problem:** The application initially experienced connectivity issues with MongoDB Atlas upon deployment, caused by hosting and connection configuration errors.
+> 
+> **The Solution:** Investigating the configuration revealed that modifying the prefix of the API connection string resolved the issue and established a stable connection.
+
+<br>
+
+
 
 ## Finished Product
 
